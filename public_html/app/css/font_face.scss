@@ -1,0 +1,57 @@
+/****************************************
+
+FONT COMMON (MOBILE, TAB, DESKTOP)
+
+****************************************/
+
+// CALIBRI REGULAR
+
+@font-face {
+     font-family: 'CalibriRegular';
+     src: url('../assets/fonts/calibri.eot');
+     src: url('../assets/fonts/calibri.eot?#iefix') format('embedded-opentype'),
+     url('../assets/fonts/calibri.woff') format('woff'),
+     url('../assets/fonts/calibri.ttf') format('truetype'),
+     url('../assets/fonts/calibri.svg#CalibriRegular') format('svg');
+     font-weight: normal;
+     font-style: normal;
+}
+
+// CALIBRI BOLD
+
+@font-face {
+     font-family: 'CalibriBold';
+     src: url('../assets/fonts/calibri-bold.eot');
+     src: url('../assets/fonts/calibri-bold.eot?#iefix') format('embedded-opentype'),
+     url('../assets/fonts/calibri-bold.woff') format('woff'),
+     url('../assets/fonts/calibri-bold.ttf') format('truetype'),
+     url('../assets/fonts/calibri-bold.svg#CalibriBold') format('svg');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face{
+     font-family : 'digital';
+     src : url("../assets/fonts/digital.ttf");
+     font-weight: normal;
+     font-style: normal;
+}
+
+/* CARDS FONT */
+@font-face {
+     font-family: 'cardsFont';
+     src: url("../assets/fonts/cards21.ttf");
+}
+
+@font-face {
+     font-family: 'RobotoBold';
+     src: url("../assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+     font-family:"Tex";
+     src: url("../assets/fonts/texgyretermes-regular.otf");
+     src: url("../assets/fonts/texgyretermes-regular.eot?") format("eot"),url("../assets/fonts/texgyretermes-regular.woff") format("woff"),url("../assets/fonts/texgyretermes-regular.ttf") format("truetype"),url("../assets/fonts/texgyretermes-regular.svg#TeXGyreTermes-Regular") format("svg");
+     font-weight:normal;
+     font-style:normal;
+}

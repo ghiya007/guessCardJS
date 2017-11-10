@@ -1,0 +1,89 @@
+.marg-0{
+    margin:0;
+}
+
+.marg-5{
+  margin: 5px;  
+}
+
+.marg-10{
+  margin: 10px;  
+}
+
+
+.marg-15{
+  margin: 15px;  
+}
+
+
+.marg-20{
+  margin: 20px;  
+}
+
+
+.marg-25{
+  margin: 25px;  
+}
+
+
+.marg-30{
+  margin: 30px;  
+}
+
+.padd-0{
+    padding:0;
+}
+
+.padd-5{
+    padding: 5px;
+}
+
+.padd-10{
+    padding: 10px;
+}
+
+.padd-15{
+    padding: 15px;
+}
+
+.padd-20{
+    padding: 20px;
+}
+
+.padd-25{
+    padding: 25px;
+}
+
+.pos-abs{
+    position: absolute;
+}
+
+.pos-rel{
+    position: relative;
+}
+
+.w100{
+    width:100%;
+}
+
+.h100{
+    height:100%;
+}
+
+
+.disp-flex{
+    display: flex;
+    justify-content: center;    
+}
+
+.flex-cntr{
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    display: inline;
+}
