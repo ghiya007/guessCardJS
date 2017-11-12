@@ -5,12 +5,20 @@ var cardTemplate = {
     faceValue : [2,3,4,5,6,7,8,9,10,11,12,13,14],
     faceStr : ['2','3','4','5','6','7','8','9','10', 'J', 'Q', 'K', 'A'],
 }
-var cardDeckD1 = {
+var defaultCardObj = {
     suitValue : '',
     suitStr : '',
     faceValue : '',
     faceStr :'',
-};
+}
+var cardDeckD1= new Array();
+var userSelection = [];
+var formCard = {};
+var cardIndex = 0;
+
+
+
+
 window.onload = function(){
     var cardFaceValue = new Array(13);
     for(var i=0;i < cardTemplate.suitStr.length; i++){
@@ -30,7 +38,7 @@ window.onload = function(){
         fvalue.innerHTML = cardTemplate.faceStr[i];
         fvalue.value = cardTemplate.faceStr[i];
         fvalue.id = 'faceValue'+cardTemplate.faceStr[i];
-        document.getElementById(fvalue.id).setAttribute('card-value', fvalue.value);
+        document.getElementById(fvalue.id).setAttribute('suit-value', fvalue.value);
         document.getElementById(fvalue.id).addEventListener('click', handleClickOnFaceValue, true);              
     }
     
@@ -38,26 +46,54 @@ window.onload = function(){
     
 }
 
-function handleClickOnFaceValue(e){
-    console.log("btn is click",e.target);
-}
-
 function handleClickOnCardSuit(e){
-    console.log("btn is click",e.target);
+    userSelection[cardIndex] = defaultCardObj;
+    userSelection[cardIndex].suitValue = e.target.value;
+    userSelection[cardIndex].suitStr = cardTemplate.suitStr[parseInt(e.target.value)]; 
 }
 
-function createCardDeck(){
-     var cardNo = 0;
-    for (var i = 0; i < 4; i++) {
-        for( var j=0; j<13; j++){
-           cardDeckD1[cardNo] = {
-            suitValue: cardTemplate.suitValue[i],
-            suitStr: cardTemplate.suitStr[i],
-            faceValue: cardTemplate.faceValue[j],
-            faceStr: cardTemplate.faceStr[j],
-           } 
-           cardNo++;
-        }
-    }
-    console.log("Card Deck::::",cardDeckD1);
+function handleClickOnFaceValue(e){
+    userSelection[cardIndex].faceValue = e.target.value;
+    userSelection[cardIndex].faceStr = userSelection[cardIndex].faceValue.toString();    
 }
+
+
+
+function createCardDeck() {
+    var cardNo = 0;
+    for (var i = 0; i < 4; i++) {
+        for (var j = 0; j < 13; j++) {
+            cardDeckD1[cardNo] = {
+                suitValue: cardTemplate.suitValue[i],
+                suitStr: cardTemplate.suitStr[i],
+                faceValue: cardTemplate.faceValue[j],
+                faceStr: cardTemplate.faceStr[j],
+                index: cardNo,
+            }
+            cardNo++;
+
+        }
+
+    }
+}
+
+function abc(obj){
+    if(userSelection[cardIndex].suitValue == obj.suitValue && userSelection[cardIndex].faceValue == obj.faceValue){
+        console.log("object fount from deck:::",obj)
+        return true;
+    }
+    
+ }
+
+
+function createCrdsCombinations(){
+    console.log("USer selected Card",userSelection);   
+    var x = cardDeckD1.filter(abc);
+    
+    console.log("card deck::::",x);
+    cardDeckD1.splice(x[0].index,1);
+    console.log("card deck splice::::",cardDeckD1);
+    cardIndex++;
+    
+}
+

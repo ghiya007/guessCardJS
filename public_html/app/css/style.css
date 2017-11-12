@@ -1,13 +1,13 @@
 .main-wrapper{
     padding:4px;
 }
-
-.container-wrapper{
-    
-}
-
 .container{
-    position: absolute;    
+    position: absolute;
+
+    width: 86%;
+    border: 5px solid red;
+    height: 40%;
+    margin: 0 auto    
 }
 
 .card-input{
@@ -60,6 +60,7 @@
 }
 
 .card-suit ul li{
+    cursor: pointer;
     height: 70%;
     width: 12%;
     border: 1px solid darkolivegreen;
@@ -118,5 +119,13 @@
      src: url("../assets/fonts/texgyretermes-regular.eot?") format("eot"),url("../assets/fonts/texgyretermes-regular.woff") format("woff"),url("../assets/fonts/texgyretermes-regular.ttf") format("truetype"),url("../assets/fonts/texgyretermes-regular.svg#TeXGyreTermes-Regular") format("svg");
      font-weight:normal;
      font-style:normal;
+}
+
+.btn-container{
+    top: 58%;
+    position: absolute;
+    border: 2px solid green;
+    width: 30%;
+    height: 26%;
 }
 
